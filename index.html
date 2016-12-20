@@ -90,7 +90,8 @@
 <!--       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p> -->
-      <div class="well" ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" >
+      <div class="well">
+	      <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" >
                 <button type="button" class="btn btn-default" ng-click="addItem()" style="background-color:green;">
                   <span class="glyphicon glyphicon-thumbs-up" ng-model="addme"></span>
                 </button>
@@ -178,22 +179,6 @@
     </div>
   </div>
 </div> 
-<script>
-		var app = angular.module("myShoppingList", []); 
-		app.controller("myCtrl", function($scope) {
-			 $scope.addItem = function () {
-			   $scope.x = 0;
-			 $scope.addItem = function () {
-				$scope.x += 1;    
-			}
-			$scope.removeItem = function () {
-			  if($scope.x <= 0) {
-			  }else {
-				$scope.x -=  1;
-			  }
-			}
-		});
-</script>
 <footer class="container-fluid text-center">
   <p>Saboor©2016</p>
 </footer>
