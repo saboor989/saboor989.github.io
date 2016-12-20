@@ -90,7 +90,32 @@
 <!--       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p> -->
-      <div class="well">        
+      <div class="well">
+        <script>
+            var app = angular.module("myShoppingList", []); 
+            app.controller("myCtrl", function($scope) {
+                 $scope.addItem = function () {
+                   $scope.x = 0;
+                 $scope.addItem = function () {
+                    $scope.x += 1;    
+                }
+                $scope.removeItem = function () {
+                  if($scope.x <= 0) {
+                  }else {
+                    $scope.x -=  1;
+                  }
+                }
+            });
+        </script>
+              <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" >
+                <button type="button" class="btn btn-default" ng-click="addItem()" style="background-color:green;">
+                  <span class="glyphicon glyphicon-thumbs-up" ng-model="addme"></span>
+                </button>
+                  {{x}}
+                <button type="button" class="btn btn-default" ng-click="removeItem()" style="background-color:red;">
+                  <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer;"></span> 
+                </button>
+              </div>
       </div>
     </div>
  
@@ -112,32 +137,6 @@
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h1>Experience:</h1>
-                <script>
-                    var app = angular.module("myShoppingList", []); 
-                    app.controller("myCtrl", function($scope) {
-                         $scope.addItem = function () {
-                           $scope.x = 0;
-                         $scope.addItem = function () {
-                            $scope.x += 1;    
-                        }
-                        $scope.removeItem = function () {
-                          if($scope.x <= 0) {
-                          }else {
-                            $scope.x -=  1;
-                          }
-                        }
-                    });
-              </script>
-
-              <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" >
-                <button type="button" class="btn btn-default" ng-click="addItem()" style="background-color:green;">
-                  <span class="glyphicon glyphicon-thumbs-up" ng-model="addme"></span>
-                </button>
-                  {{x}}
-                <button type="button" class="btn btn-default" ng-click="removeItem()" style="background-color:red;">
-                  <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer;"></span> 
-                </button>
-              </div>
         </div>
           </div>
           <div class="panel-body">
