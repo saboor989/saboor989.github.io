@@ -130,11 +130,11 @@
               </script>
 
               <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" >
-                <button type="button" class="btn btn-default" ng-click="addItem()">
+                <button type="button" class="btn btn-default" ng-click="addItem()" style="background-color:green;">
                   <span class="glyphicon glyphicon-thumbs-up" ng-model="addme"></span>
                 </button>
                   {{x}}
-                <button type="button" class="btn btn-default" ng-click="removeItem()">
+                <button type="button" class="btn btn-default" ng-click="removeItem()" style="background-color:red;">
                   <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer;"></span> 
                 </button>
               </div>
