@@ -55,7 +55,26 @@
   </div>  
 </nav>  
  
-<div class="container-fluid text-center">    
+<script>
+		var app = angular.module("myShoppingList", []); 
+		app.controller("myCtrl", function($scope) {
+			 $scope.addItem = function () {
+			   $scope.x = 0;
+			 $scope.addItem = function () {
+				$scope.x += 1;    
+			}
+			$scope.removeItem = function () {
+			  if($scope.x <= 0) {
+			  }else {
+				$scope.x -=  1;
+			  }
+			}
+		});
+    </script>
+        
+	
+	
+<div class="container-fluid text-center" ng-app="myShoppingList" ng-controller="myCtrl" >    
   <div class="row content">
     <div class="col-sm-4 well">
       <div class="well">
@@ -91,6 +110,13 @@
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p> -->
       <div class="well">
+	<button type="button" class="btn btn-default" ng-click="addItem()" style="background-color:green;">
+	  <span class="glyphicon glyphicon-thumbs-up" ng-model="addme"></span>
+        </button>
+        {{x}}
+        <button type="button" class="btn btn-default" ng-click="removeItem()" style="background-color:red;">
+          <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer;"></span> 
+        </button>
       </div>
     </div>
  
@@ -172,32 +198,6 @@
 </div> 
 <footer class="container-fluid text-center">
   <p>Saboor©2016</p>
-  <script>
-		var app = angular.module("myShoppingList", []); 
-		app.controller("myCtrl", function($scope) {
-			 $scope.addItem = function () {
-			   $scope.x = 0;
-			 $scope.addItem = function () {
-				$scope.x += 1;    
-			}
-			$scope.removeItem = function () {
-			  if($scope.x <= 0) {
-			  }else {
-				$scope.x -=  1;
-			  }
-			}
-		});
-    </script>
-   <div ng-app="myShoppingList" ng-cloak ng-controller="myCtrl" >
-                <button type="button" class="btn btn-default" ng-click="addItem()" style="background-color:green;">
-                  <span class="glyphicon glyphicon-thumbs-up" ng-model="addme"></span>
-                </button>
-                  {{x}}
-                <button type="button" class="btn btn-default" ng-click="removeItem()" style="background-color:red;">
-                  <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer;"></span> 
-                </button>
-	      </div>
-
 </footer>
 
 </body>
