@@ -110,14 +110,14 @@
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h1>Experience:</h1>
-		<button type="button" class="btn btn-default" style="background-color:green;" onclick="incrementValue()">
-		  <span class="glyphicon glyphicon-thumbs-up"></span>
-		</button>
+            <h1>Experience:<button type="button" class="btn btn-default" style="background-color:green;" onclick="incrementValue()">
+		  <span class="glyphicon glyphicon-thumbs-up" style="font-color:black"></span>
+			</button>
 		<p id="demo"></p>
 		<button type="button" class="btn btn-default" onclick="incrementValue()" style="background-color:red;">
 		  <span class="glyphicon glyphicon-thumbs-down" style="cursor:pointer;"></span> 
 		</button>
+		</h1>
           </div>
           <div class="panel-body">
             <p><b>Radial.com: (July 2016 – Nov 2016)</b></p>
@@ -180,16 +180,30 @@
   <p>Saboor©2016</p>
 </footer>
 <script>
-     function incrementValue()
-	{
-	var x = 0;
-	    var value = parseInt(document.getElementById("demo").innerHTML);
-	    value = isNaN(value) ? 0 : value;
-	    value++;
-	    document.getElementById('demo').innerHTML  = value;
-	}
-</script>
+var x = 0;
+function incrementValue()
+{
+if(x == 0){
+    var value = parseInt(document.getElementById("demo").innerHTML);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    x++;
+    document.getElementById('demo').innerHTML  = value;
+    }
+}
 
+function decrementValue()
+{
+if(x >= 1){
+    var value = parseInt(document.getElementById("demo").innerHTML);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    x--;
+    document.getElementById('demo').innerHTML  = value;
+    }
+}
+
+</script>
 
 
 </body>
