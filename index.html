@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en" ng-app> 
 <head> 
 <!--Code to refresh page after 15 sec 	 -->
 <!--   <meta http-equiv="refresh" content="15"/> -->
@@ -276,6 +276,13 @@
     </div>
   </div>
 </div> 
+	<div ng-controller = "word">
+		<p> Hi checking angular functionality</p>
+		 Enter Name: <input ng-model = "userName"></input>
+               <p>The Current Time is: <span ng-bind = "hourOfDay"></span></p>
+               <p> The name : {{userName}}</p>
+	</div>
+	
 <footer class="container-fluid text-center">
   <p>Saboor©2016</p>
 </footer>
